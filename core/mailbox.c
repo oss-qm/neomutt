@@ -39,12 +39,13 @@
  * mailbox_new - Create a new Mailbox
  * @retval ptr New Mailbox
  */
-struct Mailbox *mailbox_new(void)
+struct Mailbox *mailbox_new(const char *name)
 {
   struct Mailbox *m = mutt_mem_calloc(1, sizeof(struct Mailbox));
 
   mutt_buffer_init(&m->pathbuf);
   m->notify = notify_new();
+  m->name = mutt_str_strdup(name);
 
   m->email_max = 25;
   m->emails = mutt_mem_calloc(m->email_max, sizeof(struct Email *));

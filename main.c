@@ -75,6 +75,7 @@
 #include "protos.h"
 #include "send.h"
 #include "sendlib.h"
+#include "tracker.h"
 #include "version.h"
 #ifdef ENABLE_NLS
 #include <libintl.h>
@@ -1125,10 +1126,10 @@ int main(int argc, char *argv[], char *envp[])
     {
       if (C_Spoolfile)
       {
-        // Check if C_Spoolfile corresponds a mailboxes' description.
-        struct Mailbox *m_desc = mailbox_find_name(C_Spoolfile);
-        if (m_desc)
-          mutt_buffer_strcpy(&folder, m_desc->realpath);
+        // Check if C_Spoolfile corresponds a mailbox's name.
+        struct Mailbox *m_name = mailbox_find_name(C_Spoolfile);
+        if (m_name)
+          mutt_buffer_strcpy(&folder, m_name->realpath);
         else
           mutt_buffer_strcpy(&folder, C_Spoolfile);
       }
