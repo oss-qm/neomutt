@@ -51,7 +51,10 @@
 #endif
 
 /* These Config Variables are only used in pop/pop_lib.c */
+char *C_PopOauthRefreshCommand; ///< Config: (pop) External command to generate OAUTH refresh token
+char *C_PopPass; ///< Config: (pop) Password of the POP server
 unsigned char C_PopReconnect; ///< Config: (pop) Reconnect to the server is the connection is lost
+char *C_PopUser; ///< Config: (pop) Username of the POP server
 
 /**
  * pop_get_field - Get connection login credentials - Implements ::ca_get_field_t

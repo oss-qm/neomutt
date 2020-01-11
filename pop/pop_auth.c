@@ -38,6 +38,7 @@
 #include "mutt_account.h"
 #include "mutt_logging.h"
 #include "mutt_socket.h"
+#include "pop.h"
 #ifdef USE_SASL
 #include <sasl/sasl.h>
 #include <sasl/saslutil.h>
