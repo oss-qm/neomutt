@@ -1681,3 +1681,72 @@ int mx_save_hcache(struct Mailbox *m, struct Email *e)
 
   return m->mx_ops->msg_save_hcache(m, e);
 }
+
+/**
+ * path2_tidy - Tidy a Mailbox path
+ */
+int path2_tidy(struct MuttPath *path)
+{
+  return -1;
+}
+
+/**
+ * path2_resolve - XXX
+ */
+int path2_resolve(struct MuttPath *path, const char *folder)
+{
+  return -1;
+}
+
+/**
+ * mx_path2_canon - XXX
+ */
+int mx_path2_canon(struct MuttPath *path)
+{
+  return -1;
+}
+
+/**
+ * mx_path2_compare - XXX
+ */
+int mx_path2_compare(struct MuttPath *path1, struct MuttPath *path2)
+{
+  return -1;
+}
+
+/**
+ * mx_path2_parent - XXX
+ * @retval -1 Error
+ * @retval  0 Success, parent returned
+ * @retval  1 Success, path is has no parent
+ */
+int mx_path2_parent(const struct MuttPath *path, struct MuttPath **parent)
+{
+  return -1;
+}
+
+/**
+ * mx_path2_pretty - XXX
+ */
+int mx_path2_pretty(const struct MuttPath *path, const char *folder, char **pretty)
+{
+  return -1;
+}
+
+/**
+ * mx_path2_probe - Determine the Mailbox type of a path
+ * @param path Path to examine
+ * @retval num Type, e.g. #MUTT_IMAP
+ */
+enum MailboxType mx_path2_probe(struct MuttPath *path)
+{
+  return MUTT_MAILBOX_ERROR;
+}
+
+/**
+ * mx_path2_resolve - XXX
+ */
+int mx_path2_resolve(struct MuttPath *path, const char *folder)
+{
+  return -1;
+}
