@@ -1284,6 +1284,7 @@ static int pop_path_parent(char *buf, size_t buflen)
 struct MxOps MxPopOps = {
   .magic            = MUTT_POP,
   .name             = "pop",
+  .is_local         = false,
   .ac_find          = pop_ac_find,
   .ac_add           = pop_ac_add,
   .mbox_open        = pop_mbox_open,
